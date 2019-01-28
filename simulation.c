@@ -41,7 +41,7 @@ void calculateAcceleration(double ax[], double ay[], double x[], double y[]){
         //j index only runs through some points.
         //Visualization: an N by N matrix. (i,j) runs through every lower diagonal. 
         for(int j=0;j<i;j++){
-            //(diffx,diffy) is a vector which points FROM particle i, TO particle j. 
+            //(diffx,diffy) is a vector which points FROM particle j, TO particle i. 
             //Subtracting (x[j],y[j]) puts the jth particle at the origin.
             double diffx=x[i]-x[j];
             double diffy=y[i]-y[j];
