@@ -25,7 +25,7 @@ This will allow us to find "mpeg_encode" in our LOCAL terminal (so if you close 
 you will have to run "export" again.)
 
 Next, call `mpeg_encode mpgparams`. This creates an mpeg file using the parameters in the text file mpgparams. 
-A description of mpgparams can be found inside the "makempeg_manual.html" file.
+A description of mpgparams can be found at this link [https://davidphys.github.io/vdw-example/makempeg_manual.html](https://davidphys.github.io/vdw-example/makempeg_manual.html).
 Note that you have to have .jpg files! Additional (but outdated) information is at [https://courses.physics.ucsd.edu/2016/Winter/physics141/Labs/Lab3/Lab3.html](https://courses.physics.ucsd.edu/2016/Winter/physics141/Labs/Lab3/Lab3.html).
 
 
