@@ -1,0 +1,702 @@
+
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en" lang="en">
+ <head>
+  <link rel="shortcut icon" href="../../favicon.ico" />
+  <style type="text/css" title="default"> @import "/style.css"; </style>
+  <meta name="generator" content="txt2tags http://txt2tags.sf.net/" />
+
+ <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /> 
+ <link rel="alternate" type="application/xml" title="RSS"  href="http://linuxreviews.org/en.rss" />
+  <meta name="description" content=" encodes MPEG-1 bitstreams" />
+  
+  <title>mpeg_encode
+ (Linux Reviews)</title>
+</head>
+<body bgcolor="#f0f0f0" text="#000000">
+<table width="100%">
+
+ <tr> 
+	 <td colspan="3">
+<table width="100%" style="background-color: #FFF7F7; border: solid 1px #ffd6d6;"><tr><td align="center">
+<!-- BEGIN GOOGLE /-->
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-7707288103057160";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="3570253353";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- END GOOGLE /-->
+
+</td></tr></table>
+
+		 <table cellspacing="0" cellpadding="3" bgcolor="#ffffff" border="0" width="100%" style="border: solid 1px #d9d9d9;"> 
+		 <tr> 
+			 <td>
+
+
+
+<table width="650" border="0" cellpadding="0" cellspacing="4" align="center">
+  <tr>
+    <td width="377" valign="top">
+      <img src="http://linuxreviews.org/linuxreviews-logo-377x150.png" width="377" height="150" alt="LinuxReviws.org --get your your Linux knowledge" />
+    </td>
+    <td width="5"></td>
+    <td width="150"  align="left" valign="middle">
+
+
+  </td>
+  </tr>
+</table>
+
+
+
+			 </td> 
+		 </tr> 
+		 </table>
+
+	 </td> 
+ </tr>
+
+ <tr> 
+	 <td width="1%"> 
+	 </td>
+
+	 <td width="60%" align="center" valign="top"> 
+		 <table cellspacing="0" cellpadding="3" bgcolor="#fcfcfc" border="0" width="100%" style="border: solid 1px #d9d9d9;"> 
+		 <tr> 
+			 <td> 
+				 <div id="content">
+&gt; <a href="../../index.html.en">Linux Reviews</a> &gt; <a href="../index.html.en">Manual Pages (man)</a> &gt;<h1 class="pagetitle">mpeg_encode</h1>
+<p class="pagetitle"> encodes MPEG-1 bitstreams</p>
+<table width="100%" style="background-color: #FFF7F7; border: solid 1px #ffd6d6;"><tr><td align="center">
+
+<!-- BEGIN GOOGLE /-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-7707288103057160";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="";
+google_ad_type = "text_image";
+google_color_border = "A8DDA0";
+google_color_bg = "EBFFED";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "6F6F6F";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- END GOOGLE /-->
+</td></tr></table>
+<p></p>
+<hr class="light" />
+<p></p>
+
+  <ol>
+  <li><a href="#toc1">mpeg_encode.1.man</a>
+  </li>
+  </ol>
+
+<p></p>
+<hr class="light" />
+<p></p>
+
+<a id="toc1" name="toc1"></a>
+<h1>1. mpeg_encode.1.man</h1>
+
+
+
+<h1>Manpage of MPEG_ENCODE</h1>
+
+<h2>MPEG_ENCODE</h2>
+Section: User Commands  (1)<BR>Updated: 1 February 1995<BR><A HREF="#index">Index</A>
+<A HREF="../">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+mpeg_encode - encodes MPEG-1 bitstreams
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>mpeg_encode</B>
+
+[
+<B></B><I>options</I>
+
+]
+<B></B><I>parameter-file</I>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>mpeg_encode</B>
+
+produces an MPEG-1 video stream.  param_file is a parameter file which
+includes a list of input files and other parameters.  The file is described
+in detail below.  The -gop, -combine_gops, -frames, and -combine_frames
+options are all exclusive.  This man page is probably incomplete.  For
+complete usage, see the User's Guide.
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<DL COMPACT>
+<DT>
+<B>-stat stat_file</B>
+
+: causes the encoder to append the statistics to the file <I>stat_file</I>.
+<DD>In any case, the statistics are output to stdout.  The statistics use the
+following abbreviations:  bits per block (bpb), bits per frame (bpf),
+seconds per frame (spf), and bits per second (bps).
+<DT>
+<B>-quiet num_seconds</B>
+
+: causes the program to not report remaining time for at least num_seconds
+<DD>seconds.  A negative values tells the program not to report at all.  0 is
+the default (reports once after each frame).  Note that the time remaining
+is an estimate and does not take into account time to read in frames.
+<DT>
+<B>-realquiet</B>
+
+: causes the encoder to run silently, with the only screen output being errors.
+<DD>Particularly useful when reading input from stdin.
+<DT>
+<B>-no_frame_summary</B>
+
+: prevents the program from printing a summary line for each frame
+<DT>
+<B>-float_dct</B>
+
+: forces the encoder to use a more accurate, yet more computationally expensive
+<DD>version of the DCT.
+<DT>
+<B>-gop gop_num</B>
+
+: causes the encoder to only encode the numbered GOP (first GOP is 0).  The
+<DD>parameter file is the same as for normal usage.  The output file will be
+the normal output file with the suffix &quot;.gop.&lt;gop_num&gt;&quot;  No sequence info
+is output.
+<DT>
+<B>-combine_gops</B>
+
+: causes the encoder to simply combine some GOP files into a single MPEG
+<DD>stream.  A sequence header/ender are inserted.  In this case, the parameter
+file need only contain the YUV_SIZE value, an output file, and perhaps a
+list of input GOP files (see below).
+<DT>
+<B>-frames first_frame last_frame</B>
+
+: causes the encoder to only encode the frames from first_frame to
+<DD>last_frame, inclusive.  The parameter file is the same as for normal usage.
+The output will be placed in separate files, one per frame, with the file
+names being the normal output file with the suffix &quot;.frame.&lt;frame num&gt;&quot;  No
+GOP header information is output.  (Thus, the parameter file need not include
+the GOP_SIZE value)
+<DT>
+<B>-combine_frames</B>
+
+: causes the encoder to simply combine some frames into a single MPEG stream.
+<DD>Sequence and GOP headers are inserted appropriately.  In this case, the
+parameter file need only contain the YUV_SIZE
+value, the GOP_SIZE value, an output file, and perhaps a list of frame
+files (see below).
+<DT>
+<B>-nice</B>
+
+: causes the program to run any remote processes 'nicely.'  This is only
+<DD>relevant if the program is using parallel encoding.  (see 'man nice.')
+<DT>
+<B>-max_machines num_machines</B>
+
+: causes the program to use no more than num_machines machines as slaves for
+<DD>use in parallel encoding.
+<DT>
+<B>-snr</B>
+
+: print the signal-to-noise ratio.  Prints SNR (Y U V) and peak SNR (Y U V)
+<DD>for each frame.  In summary, prints averages of luminance only (Y).  SNR is
+defined as 10*log(variance of original/variance of error).  Peak SNR is
+defined as 20*log(255/RMSE).  Note that the encoder will run a little slower
+if you want it to print the SNR.
+<DT>
+<B>-mse</B>
+
+: computes the mean squared error per block.  Also automatically computes 
+<DD>the quality of the images when set, so there is no need to specify -snr then.
+<DT>
+<B>-bit_rate_info rate_file</B>
+
+: prints bit rate information into the file rate_file.  Bit rate info is bits
+<DD>per frame, and also bits per I-frame-to-I-frame.
+<DT>
+<B>-mv-histogram</B>
+
+: prints histogram of motion vectors as part of statistics.  There are three
+<DD>histograms -- one for P, forward B, and backward B vectors.  Each histogram
+is a 2-dimensional array, and there is one entry for each vector in the
+search window.
+<DT>
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>PARAMETER FILE</H2>
+
+<DD>The parameter file MUST contain the following lines (except when using the
+-combine_gops or -combine_frames options):
+<DL COMPACT>
+<DT>
+<DL COMPACT><DT><DD>
+<DD>PATTERN &lt;pattern&gt;
+<DL COMPACT>
+<DT>
+<DD>OUTPUT &lt;output file&gt;
+<DT>
+<DD>INPUT_DIR &lt;directory&gt;
+<DL COMPACT><DT><DD>
+all input files must reside in this directory.  If you want to refer to the
+current directory, use '.' (an empty INPUT_DIR value would refer to the root
+directory).  If input files will be coming in from standard input, use
+
+</DL>
+
+<DT>
+<DD>INPUT
+<DL COMPACT><DT><DD>
+This line must be followed by a list of the input files (in display order)
+and then the line
+<DL COMPACT><DT><DD>
+END_INPUT
+</DL>
+
+There are three types of lines between INPUT and END_INPUT.  First, a line
+may simply be the name of an input file.  Secondly, the line may be of the
+form
+<DL COMPACT><DT><DD>
+&lt;single_star_expr&gt; [x-y]
+</DL>
+
+single_star_expr can have a single '*' in it.  It is replaced by all the
+numbers between x and y inclusive.  So, for example, the line
+<DL COMPACT><DT><DD>
+tennis*.ppm [12-15]
+</DL>
+
+is replaced by tennis12.ppm, tennis13.ppm, tennis14.ppm, tennis15.ppm.
+Uniform zero-padding occurs, as well.  For example, the line
+<DL COMPACT><DT><DD>
+football.*.ppm [001-130]
+</DL>
+
+is replaced by football.001.ppm, football.002.ppm, ..., football.009.ppm,
+football.010.ppm, ..., football.130.ppm.  The third type of line is:
+<DL COMPACT><DT><DD>
+&lt;single_star_expr&gt; [x-y+s]
+</DL>
+
+Where the line is treated exactly as above, except that we skip by s.  Thus,
+the line
+<DL COMPACT><DT><DD>
+football.*.ppm [001-130+4]
+</DL>
+
+is replaced by football.001.ppm, football.005.ppm, football.009.ppm,
+football.013.ppm, etc.
+</DL>
+
+<DT>
+<DD>BASE_FILE_FORMAT &lt;YUV or PPM or PNM or JPEG or JMOVIE&gt;
+<DL COMPACT><DT><DD>
+All the input files must be converted to YUV, JPEG(v4), JMOVIE, PNM, or PPM 
+format.  This line specifies which of the three formats (actually PPM is a 
+subset of PNM).  The reason for having a separate PPM option is for 
+simplicity.  If your files are RAWBITS ppm files, then use the PPM option 
+rather than the PNM.  Also, depending on the system, file reads will go much 
+faster with the PPM option (as opposed to PNM).
+</DL>
+
+<DT>
+<DD>INPUT_CONVERT &lt;conversion command&gt;
+<DL COMPACT><DT><DD>
+You must specify how to convert a file to the base file format.  In the
+conversion command, each '*' is replaced by the filename (the items listed
+between INPUT and END_INPUT).  If no conversion is necessary, then you would
+just say:
+<DL COMPACT><DT><DD>
+INPUT_CONVERT *
+</DL>
+
+If you had a bunch of gif files, you might say:
+<DL COMPACT><DT><DD>
+INPUT_CONVERT giftoppm *
+</DL>
+
+If you have a bunch of separate a.Y, a.U, and a.V files, then you might say:
+<DL COMPACT><DT><DD>
+INPUT_CONVERT cat *.Y *.U *.V
+</DL>
+
+<DL COMPACT><DT><DD>
+Input conversion is not allowed with input from stdin.
+</DL>
+
+<DL COMPACT>
+<DT>
+<DD>GOP_SIZE &lt;n&gt;
+<DL COMPACT><DT><DD>
+n is roughly the number of frames in a Group of Pictures (roughly because
+a GOP must begin with an I-frame)
+</DL>
+
+<DT>
+<DD>SLICES_PER_FRAME &lt;n&gt;
+<DL COMPACT><DT><DD>
+n is roughly the number of slices per frame.  Note, at least one MPEG player
+may complain if slices do not start at the left side of an image.  To ensure
+this does not happen, make sure the number of rows is divisible by
+SLICES_PER_FRAME.
+</DL>
+
+<DT>
+<DD>PIXEL &lt;FULL or HALF&gt;
+<DL COMPACT><DT><DD>
+use half-pixel motion vectors, or only full-pixel ones
+</DL>
+
+<DT>
+<DD>RANGE &lt;n&gt;
+<DL COMPACT><DT><DD>
+use a search range of +/- n pixels
+</DL>
+
+<DT>
+<DD>PSEARCH_ALG &lt;algorithm&gt;
+<DL COMPACT><DT><DD>
+algorithm must be one of {EXHAUSTIVE, TWOLEVEL, SUBSAMPLE, LOGARITHMIC}.
+Tells what kind of search procedure should be used for P-frames.
+Exhaustive gives the best compression, but logarithmic is the
+fastest.  You select the desired combination of speed and compression.
+TWOLEVEL is an exhaustive full-pixel search, followed by a local half-
+pixel search around the best full-pixel vector (the PIXEL option is
+ignored for this search algorithm).
+</DL>
+
+<DT>
+<DD>BSEARCH_ALG &lt;algorithm&gt;
+<DL COMPACT><DT><DD>
+algorithm must be one of {SIMPLE, CROSS2, EXHAUSTIVE}.  Tells what kind of
+search procedure should be used for B-frames.  Simple means find best forward
+and backward vectors, then interpolate.  Cross2 means find those two vectors,
+then see what backward vector best matches the best forward vector, and vice
+versa.  Exhaustive does an n-squared search and is EXTREMELY slow in
+relation to the others (Cross2 is about twice as slow as Simple).
+</DL>
+
+<DT>
+<DD>IQSCALE &lt;n&gt;
+<DL COMPACT><DT><DD>
+use n as the qscale for I-frames
+</DL>
+
+<DT>
+<DD>PQSCALE &lt;n&gt;
+<DL COMPACT><DT><DD>
+use n as the qscale for P-frames
+</DL>
+
+<DT>
+<DD>BQSCALE &lt;n&gt;
+<DL COMPACT><DT><DD>
+use n as the qscale for B-frames
+</DL>
+
+<DT>
+<DD>REFERENCE_FRAME &lt;ORIGINAL or DECODED&gt;
+<DL COMPACT><DT><DD>
+If ORIGINAL is specified, then the original images are used when computing
+motion vectors.  To be more accurate, use DECODED, in which the decoded
+images are used.  This should increase the quality of the image, but will
+take a bit longer to encode.
+</DL>
+
+The following lines are optional:
+<DT>
+<DL COMPACT><DT><DD>
+<DD>FORCE_I_ALIGN
+<DL COMPACT><DT><DD>
+This option is only relevant for parallel execution (see below).  It forces
+each processor to encode a block of N frames, where N must be a multiple of
+the pattern length.  Since the first frame in any pattern is an I-frame,
+this forces each block encoded by a processor to begin with an I-frame.
+</DL>
+
+foo
+</DL>
+
+<DT>
+</DL>
+</DL>
+</DL>
+</DL>
+</DL>
+<A NAME="lbAG">&nbsp;</A>
+<H2>NOTES</H2>
+
+<DD>If the BASE_FILE_FORMAT is YUV, then the parameter file must contain:
+<DL COMPACT><DT><DD>
+YUV_SIZE &lt;w&gt;x&lt;h&gt;
+</DL>
+
+where w = width, h = height (in pixels) of image, and
+<DL COMPACT><DT><DD>
+YUV_FORMAT &lt;ABEKAS or PHILLIPS or UCB or EYUV or pattern&gt;.
+</DL>
+
+See the file doc/INPUT.FORMAT for more information.
+<P>
+
+If the -combine-gops option is used, then only the YUV_SIZE and OUTPUT
+values need be specified in the parameter file.  In addition, the parameter
+file may specify input GOP files in the same manner as normal input files
+-- except instead of using INPUT_DIR, INPUT, and END_INPUT, use GOP_INPUT_DIR,
+GOP_INPUT, and GOP_END_INPUT.  If no input GOP files are specified, then the
+default is to use the output file name with suffix &quot;.gop.&lt;gop_num&gt;&quot;
+starting from 0 as the input files.
+<P>
+
+If the -combine-frames option is used, then only the YUV_SIZE, GOP_SIZE, and
+OUTPUT
+values need be specified in the parameter file.  In addition, the parameter
+file may specify input frame files in the same manner as normal input files
+-- except instead of using INPUT_DIR, INPUT, and END_INPUT, use
+FRAME_INPUT_DIR,
+FRAME_INPUT, and FRAME_END_INPUT.  If no input frame files are specified,
+then the
+default is to use the output file name with suffix &quot;.frame.&lt;frame_num&gt;&quot;
+starting from 0 as the input files.
+<P>
+
+Any number of spaces and tabs may come between each option and value.  Lines
+beginning with '#' are ignored.  Any other lines are ignored except for
+those between INPUT and END_INPUT.  This allows you to use the same
+parameter file for normal usage and for -combine_gops and -combine_frames.
+<P>
+
+The encoder is case-sensitive so, except for file names and directories,
+everything should be in upper case.
+<P>
+
+The lines may appear in any order, except the following exceptions.
+INPUT must appear before END_INPUT  (also, GOP_INPUT before GOP_END_INPUT and
+FRAME_INPUT before FRAME_END_INPUT).  All lines
+between INPUT and END_INPUT must be the frames in play order.
+<P>
+
+The encoder is prepared to handle up to 16 B frames between reference 
+frames when encoding with input from stdin.  To increase this amount,
+change the constant B_FRAME_RUN in frame.c and recompile.
+<P>
+
+<DL COMPACT>
+<DT>
+</DL>
+<A NAME="lbAH">&nbsp;</A>
+<H2>PARALLEL OPERATION</H2>
+
+<DD>The encoder may be run on multiple machines at once.  To do so, add a line
+&quot;PARALLEL&quot; in the parameter file, followed by a listing, one machine per
+line, then &quot;END_PARALLEL&quot;.  Each of the lines should be in one of two forms.
+If the machine has access to the file server, then the line should be:
+<P>
+
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>&lt;machine&gt; &lt;user&gt; &lt;executable&gt;<BR>
+<P>
+
+The executable is normally mpeg_encode (you may need to give the complete path
+if you've built for different architectures).
+If the machine is a remote machine, then the line should be:
+<P>
+
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>REMOTE &lt;machine&gt; &lt;user&gt; &lt;executable&gt; &lt;parameter file&gt;<BR>
+<P>
+
+Full paths should generally be used when describing executables and parameter
+files.  This INCLUDES the parameter file given as an argument to the original
+call to mpeg_encode.  Also, .rhosts files on the appropriate machines should
+have the appropriate information.
+<P>
+
+The encoder will use the original machine for the master and I/O server
+processes, and uses the listed machines as slaves to do the computation.
+<P>
+
+Optional lines are
+
+<DL COMPACT>
+<DT>
+<DD>RSH &lt;remote shell command&gt;
+<DL COMPACT><DT><DD>
+The encoder uses the remote shell command to start processes on other
+machines.  The default command is 'rsh.'  If your machine supports a
+different command, specify it here.
+</DL>
+
+<DT>
+<DD>PARALLEL_TEST_FRAMES &lt;n&gt;
+<DL COMPACT><DT><DD>
+n is the number of frames to encode initially on each processor
+</DL>
+
+<DT>
+<DD>PARALLEL_TIME_CHUNKS &lt;t&gt;
+<DL COMPACT><DT><DD>
+subsequently, each slave processor will be asked to encode for approximately
+t seconds.  Smaller values of &lt;t&gt; increase communication, but improve load
+balancing.
+<DL COMPACT>
+<DT>
+<DD>The default values for these two options are n = 3 frames and t = 30 seconds.
+</DL>
+</DL>
+
+<DT>
+<DD>PARALLEL_PERFECT
+<DL COMPACT><DT><DD>
+If this line is present, then scheduling is done on the assumption that
+work distribution will be perfectly even -- meaning that each machine is
+about the same speed.  The frames will simply be divided up evenly between
+the processors.  This has the advantage of very minimal scheduling overhead,
+but is obviously wrong if machines have varying speeds, or if the network
+load makes performance uneven.
+</DL>
+
+</DL>
+<A NAME="lbAI">&nbsp;</A>
+<H2>VERSION</H2>
+
+This is version 1.5 it contins new features and bug fixes from version 1.3.
+<A NAME="lbAJ">&nbsp;</A>
+<H2>BUGS</H2>
+
+No known bugs, but if you find any, report them to <A HREF="mailto:mpeg-bugs@plateau.cs.berkeley.edu">mpeg-bugs@plateau.cs.berkeley.edu</A>.
+<DL COMPACT>
+<DT>
+</DL>
+<A NAME="lbAK">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+<DL COMPACT>
+<DT>
+<DD>Kevin Gong - University of California, Berkeley, <A HREF="mailto:keving@cs.berkeley.edu">keving@cs.berkeley.edu</A>
+<DT>
+<DD>Ketan Patel - University of California, Berkeley, <A HREF="mailto:kpatel@cs.berkeley.edu">kpatel@cs.berkeley.edu</A>
+<DT>
+<DD>Dan Wallach - University of California, Berkeley, <A HREF="mailto:dwallach@cs.berkeley.edu">dwallach@cs.berkeley.edu</A>
+<DT>
+<DD>Darryl Brown - University of California, Berkeley, <A HREF="mailto:darryl@cs.berkeley.edu">darryl@cs.berkeley.edu</A>
+<DT>
+<DD>Eugene Hung - University of California, Berkeley, <A HREF="mailto:eyhung@cs.berkeley.edu">eyhung@cs.berkeley.edu</A>
+<DT>
+<DD>Steve Smoot - University of California, Berkeley, <A HREF="mailto:smoot@cs.berkeley.edu">smoot@cs.berkeley.edu</A>
+<DT>
+<P>
+<P>
+</DL>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">PARAMETER FILE</A><DD>
+<DT><A HREF="#lbAG">NOTES</A><DD>
+<DT><A HREF="#lbAH">PARALLEL OPERATION</A><DD>
+<DT><A HREF="#lbAI">VERSION</A><DD>
+<DT><A HREF="#lbAJ">BUGS</A><DD>
+<DT><A HREF="#lbAK">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="../man2html">man2html</A>
+using the manual pages.<BR>
+Time: 17:31:46 GMT, October 23, 2013
+
+
+<table width="100%" style="background-color: #FFF7F7; border: solid 1px #ffd6d6;"><tr><td align="center">
+
+
+
+<!-- BEGIN GOOGLE /-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-7707288103057160";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_channel ="";
+google_ad_type = "text_image";
+google_color_border = "A8DDA0";
+google_color_bg = "EBFFED";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "6F6F6F";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- END GOOGLE /-->
+
+</td></tr></table>
+
+		 <table cellspacing="0" cellpadding="3" bgcolor="#ffffff" border="0" width="100%" style="border: solid 1px #d9d9d9;"> 
+		 <tr> 
+			 <td>
+
+
+
+
+			 </td> 
+		 </tr> 
+		 </table>
+
+
+
+				 </div> 
+			 </td> 
+		 </tr> 
+		 </table> 
+	 </td>
+
+	 <td align="left" valign="top" width="20%">
+<table width="100%" style="background-color: #FFF7F7; border: solid 1px #ffd6d6;"><tr><td align="center">
+ 
+</td></tr></table>
+
+
+	 </td> 
+ </tr>
+
+ <tr> 
+	 <td colspan="3"> 
+		 <div id="footer"> <p align="center"> &#164; 1994-2005 <b>LinuxReviews&#8482;</b> &#164; <a href="http://linuxreviews.org/en.rss"> <img src="/rss.png" alt="LinuxReviews RSS News Feed" border="0" width="36" height="14" /> </a> &#164; <a href="http://txt2tags.sourceforge.net/"> <img src="/t2tpowered.png" width="88" height="31" alt="txt2tags 2.0" border="0" /> </a> &#164; <a href="http://6bone.informatik.uni-leipzig.de/ipv6/stats/stats.php3"> <img src="http://6bone.informatik.uni-leipzig.de/ipv6/stats/log.php3?URL=linuxreviews.org&amp;ImageId=2" alt="IPv6 Ready" width="82" height="34" /> </a> &#164; <a href="http://validator.w3.org/check?uri=referer&amp;ss=1">XHTML 1.0</a> &#164; <br /> </p>
+
+		 </div> 
+	 </td> 
+ </tr> 
+</table>
+</body>
+</html>
+

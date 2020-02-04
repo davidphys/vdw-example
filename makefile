@@ -1,7 +1,7 @@
 
 
 all: simulation.c plotter.py
-	gcc simulation.c -o simulation
+	gcc simulation.c -o simulation -lm
 	./simulation > out.txt
 	-mkdir out
 	python plotter.py
